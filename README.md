@@ -60,6 +60,54 @@ This project predicts passenger survival on the Titanic using machine learning t
 1. Clone the repository and install dependencies:
 ```bash
 pip install pandas numpy scikit-learn lightgbm xgboost matplotlib seaborn
+Prepare your dataset (train.csv and test.csv) in the project directory.
+Training
+Run the training script:
+
+CopyRun
+python train.py
+Prediction & Submission
+Generate predictions on the test set and save submission:
+
+CopyRun
+# Example code snippet
+import pandas as pd
+# Load test data
+test = pd.read_csv('test.csv')
+# Load trained model
+# model = ... (load your best model)
+# Generate predictions
+# test_pred = model.predict(test_processed)
+# Save submission
+submission = pd.DataFrame({
+    "PassengerId": test["PassengerId"],
+    "Survived": test_pred
+})
+submission.to_csv("submission.csv", index=False)
+Results & Model Performance
+Model	Accuracy	F1-score	Notes
+Logistic Regression	78%	0.75	Good baseline, interpretable
+Decision Tree	80%	0.77	Simple, prone to overfitting
+Random Forest	83%	0.80	Robust, ensemble method
+Gradient Boosting	85%	0.82	Best performer, captures complex interactions
+XGBoost	84%	0.81	Similar to Gradient Boosting
+LightGBM	83%	0.80	Efficient training
+KNN	75%	0.73	Underperformed compared to ensembles
+SVC	76%	0.74	Underperformed, sensitive to hyperparameters
+Visualizations
+Confusion matrices
+Feature importance plots
+Distribution of features and survival rates
+Conclusion
+Ensemble models like Gradient Boosting and XGBoost yield the best results for Titanic survival prediction. Feature engineering, especially FamilySize and Family, along with proper handling of missing data, enhances model performance. Logistic Regression provides a strong baseline with interpretability.
+
+License
+This project is for educational purposes. Feel free to adapt and improve upon it.
+
+Acknowledgments
+Titanic dataset from Kaggle
+scikit-learn, XGBoost, LightGBM documentation
+Data visualization with Matplotlib and Seaborn
 
 ---
 
