@@ -86,14 +86,14 @@ submission = pd.DataFrame({
 submission.to_csv("submission.csv", index=False)
 Results & Model Performance
 Model	Accuracy	F1-score	Notes
-Logistic Regression	78%	0.75	Good baseline, interpretable
-Decision Tree	80%	0.77	Simple, prone to overfitting
-Random Forest	83%	0.80	Robust, ensemble method
-Gradient Boosting	85%	0.82	Best performer, captures complex interactions
-XGBoost	84%	0.81	Similar to Gradient Boosting
-LightGBM	83%	0.80	Efficient training
-KNN	75%	0.73	Underperformed compared to ensembles
-SVC	76%	0.74	Underperformed, sensitive to hyperparameters
+Logistic Regression	0.81	Good baseline, interpretable
+Decision Tree	0.84	Simple, prone to overfitting
+Random Forest	0.84	Robust, ensemble method
+Gradient Boosting 0.85	Best performer, captures complex interactions
+XGBoost	0.84	Similar to Gradient Boosting
+LightGBM	0.82	Efficient training
+SVC	0.81	Underperformed, sensitive to hyperparameters
+KNN	0.80	Underperformed compared to ensembles
 Visualizations
 Confusion matrices
 Feature importance plots
