@@ -28,7 +28,6 @@ This project predicts passenger survival on the Titanic using machine learning t
 
 ### Models Used
 - Logistic Regression
-- Decision Tree
 - Random Forest
 - Gradient Boosting
 - XGBoost
