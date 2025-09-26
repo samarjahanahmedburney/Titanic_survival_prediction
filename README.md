@@ -5,7 +5,7 @@ This project predicts passenger survival on the Titanic using machine learning t
 
 ## Dataset
 
-- **train.csv**: Contains passenger details along with survival labels (target variable).
+- **train data set.csv**: Contains passenger details along with survival labels (target variable).
 
 ---
 
@@ -14,15 +14,17 @@ This project predicts passenger survival on the Titanic using machine learning t
 - Predict survival status of passengers using machine learning models.
 - Identify key features influencing survival.
 - Compare multiple models to determine the best approach.
-- Generate a submission file for Kaggle.
 
 ---
 
 ## Methodology
 
-### Data Preprocessing & Feature Engineering
+### Data Preprocessing , Feature Engineering & Data cleaning
 - Handle missing values and outliers.
-- Encode categorical features (`Sex`, `Embarked`) using one-hot encoding.
+- Encode categorical features ('Pclass','Sex','Age','SibSp','Parch','Fare','Embarked','Title','Deck','FamilySize','IsAlone'`) using one-hot encoding.
+- 
+- Show barplot and graph before and after cleaning
+
 
 ### Models Used
 - Logistic Regression
@@ -50,27 +52,21 @@ Training
 Run the training script:
 
 CopyRun
-python train.py
+colab Titanic_train_data.pynb
 Prediction & Submission
-Generate predictions on the test set and save submission:
+Generate predictions on the test set and save
 
-CopyRun
-# Example code snippet
-import pandas as pd
-# Load test data
-test = pd.read_csv('test.csv')
-# Load trained model
-# model = ... (load your best model)
 Results & Model Performance
-Model	Accuracy		Notes
-Logistic Regression	0.81	Good baseline, interpretable
-Decision Tree	0.84	Simple, prone to overfitting
-Random Forest	0.84	Robust, ensemble method
-Gradient Boosting 0.85	Best performer, captures complex interactions
-XGBoost	0.84	Similar to Gradient Boosting
-LightGBM	0.82	Efficient training
-SVC	0.81	Underperformed, sensitive to hyperparameters
-KNN	0.80	Underperformed compared to ensembles
+Model Accuracy Summary:
+                  Model  Accuracy
+0  Logistic Regression  0.843575
+1        Random Forest  0.793296
+2    Gradient Boosting  0.815642
+3                  SVC  0.832402
+4                  KNN  0.804469
+5              XGBoost  0.815642
+6             LightGBM  0.798883
+
 Visualizations
 Confusion matrices
 Feature importance plots
@@ -83,7 +79,7 @@ This project is for educational purposes. Feel free to adapt and improve upon it
 
 Acknowledgments
 Titanic dataset from Kaggle
-scikit-learn, XGBoost, LightGBM documentation
+scikit-learn
 Data visualization with Matplotlib and Seaborn
 
 ---
